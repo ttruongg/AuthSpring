@@ -23,7 +23,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    User createUser(@RequestBody @Valid UserCreationRequest request) {
+    UserResponse createUser(@RequestBody @Valid UserCreationRequest request) {
         return userService.createUser(request);
     }
 
